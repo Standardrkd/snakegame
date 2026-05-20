@@ -77,8 +77,8 @@ class Feed():
         self.create()
 
     def create(self):
-        x = random.randint(0,GRID_WIDTH-1)
-        y = random.randint(0,GRID_HEIGHT-1)
+        x = random.randint(0,int(GRID_WIDTH)-1)
+        y = random.randint(0,int(GRID_HEIGHT)-1)
         self.position = x*GRID_SIZE, y*GRID_SIZE
 
     def draw(self, screen):
