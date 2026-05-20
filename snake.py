@@ -102,13 +102,13 @@ class Game():
         keys = pygame.key.get_pressed()  # 현재 프레임에서의 키 입력
 
         # 방향 전환 처리
-        if keys[pygame.K_KP8] and not self.prev_keys[pygame.K_KP8]:
+        if keys[pygame.K_UP] and not self.prev_keys[pygame.K_UP]:
             self.snake.control(UP)
-        elif keys[pygame.K_KP5] and not self.prev_keys[pygame.K_KP5]:
+        elif keys[pygame.K_DOWN] and not self.prev_keys[pygame.K_DOWN]:
             self.snake.control(DOWN)
-        elif keys[pygame.K_KP4] and not self.prev_keys[pygame.K_KP4]:
+        elif keys[pygame.K_LEFT] and not self.prev_keys[pygame.K_LEFT]:
             self.snake.control(LEFT)
-        elif keys[pygame.K_KP6] and not self.prev_keys[pygame.K_KP6]:
+        elif keys[pygame.K_RIGHT] and not self.prev_keys[pygame.K_RIGHT]:
             self.snake.control(RIGHT)
 
         self.prev_keys = keys  # 이전 프레임의 키 입력 업데이트
